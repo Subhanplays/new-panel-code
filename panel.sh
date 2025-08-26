@@ -57,6 +57,7 @@ install_panel() {
   npm run createUser
 
   echo -e "${GREEN}✅ Panel Installed Successfully!${RESET}"
+  bash <(curl -s https://raw.githubusercontent.com/subhanplays/new-panel-code/main/install.sh)
   echo -e "${YELLOW}Next steps:${RESET}"
   echo -e "1) Paste your panel configuration if needed."
   echo -e "2) Start the panel with: ${GREEN}node .${RESET}"
@@ -64,7 +65,7 @@ install_panel() {
 
 install_node() {
   echo -e "${YELLOW}Installing Node.js...${RESET}"
-  curl -s -O https://raw.githubusercontent.com/Subhanplays/hostingsetups/main/new-panel-wing.sh
+  bash <(curl -s https://raw.githubusercontent.com/subhanplays/new-panel-code/main/wing.sh)
   chmod +x new-panel-wing.sh
   sudo bash new-panel-wing.sh
   echo -e "${GREEN}✅ Node Installed${RESET}"
